@@ -7,7 +7,7 @@ import (
 
 var db *sql.DB
 
-// OpenDatabase functions to open database connectivity
+// OpenDatabase is functions to open database connectivity
 func OpenDatabase(dsn string) {
 	var err error
 	db, err = sql.Open("sqlite3", dsn)

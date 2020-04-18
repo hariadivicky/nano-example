@@ -61,7 +61,7 @@ func (model *Todo) Find(id uint) *Todo {
 	return todo
 }
 
-// ToggleDoneStatus functions to invers current is_done value.
+// ToggleDoneStatus is functions to invers current is_done value.
 func (model *Todo) ToggleDoneStatus() bool {
 	model.IsDone = !model.IsDone
 

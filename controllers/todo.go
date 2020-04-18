@@ -12,7 +12,7 @@ import (
 // Todo Controller struct.
 type Todo struct{}
 
-// Index functions to handle todo list request.
+// Index is functions to handle todo list request.
 // route: GET /todos
 func (ctrl *Todo) Index(c *nano.Context) {
 	todo := new(models.Todo)
@@ -41,7 +41,7 @@ func (ctrl *Todo) Store(c *nano.Context) {
 	})
 }
 
-// findTodoByParamId functions to get todo by given parameter id.
+// findTodoByParamId is functions to get todo by given parameter id.
 func findTodoByParamID(c *nano.Context) *models.Todo {
 	id, _ := strconv.ParseUint(c.Param("id"), 10, 8)
 	model := new(models.Todo)
@@ -65,7 +65,7 @@ func (ctrl *Todo) Show(c *nano.Context) {
 	})
 }
 
-// Toggle functions to invers current done status at todo.
+// Toggle is functions to invers current done status at todo.
 // route: PUT /todos/:id/toggle
 func (ctrl *Todo) Toggle(c *nano.Context) {
 	todo := findTodoByParamID(c)
