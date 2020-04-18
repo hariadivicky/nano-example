@@ -1,6 +1,6 @@
 module todo
 
-go 1.13
+go 1.11
 
 require (
 	github.com/hariadivicky/nano v0.0.0-20200417035938-31c94f68215b

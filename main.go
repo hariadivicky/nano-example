@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	models.OpenDatabase("file:./storage/todo.db?mode=memory&cache=shared")
+	models.OpenDatabase("file:database/todo.db?cache=private")
 
 	app := newApp()
 

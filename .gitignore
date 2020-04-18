@@ -2,7 +2,7 @@
 todo
 
 # Database testing
-storage/*.db
+database/*.db
 
 # Binaries for programs and plugins
 *.exe

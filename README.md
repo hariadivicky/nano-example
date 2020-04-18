@@ -1,6 +1,6 @@
 # Todo List Example
 
-This is simple RESTful API of todo list app built using Nano HTTP Multiplexer & sqlite3
+This is simple RESTful API of todo list app built using Nano HTTP Multiplexer & SQLite
 
 ## Contents
 
@@ -14,32 +14,42 @@ This is simple RESTful API of todo list app built using Nano HTTP Multiplexer & 
 
 ## Installation
 
-To install this example, you need to install Go and set your Go workspace first.
-you need [Go](https://golang.org/) installed (**version 1.11+ is required**), then you can use the below Git command to copy this project into your locale.
+To install this example, you need to install Go, SQLite, and set your Go workspace first.
+you need [Go](https://golang.org/) installed (**version 1.11+ is required**), then you can use the below Git command to copy this project into your computer.
 
 ```bash
 git clone https://github.com/hariadivicky/nano-example
 ```
 
-You also need sqlite3, then you can create new SQLite database on `storage/` folder
+Now we assume that you are on `nano-example/` directory.
+
+Then you can create new SQLite database on `database/`
 
 ```bash
-sqlite3 storage/todos.db
+touch database/todos.db
 ```
 
-feel free to choose your database name. you could find this configuration on `main.go` file
+Feel free to choose your database name. You could find this configuration on `main.go` file
 
 ```go
-models.OpenDatabase("file:./storage/todo.db")
+models.OpenDatabase("file:./database/todo.db")
 ```
 
-build and run it
+Now you need to migrate `todos` table schema
+
+```bash
+$  sqlite3 database/todo.db
+>  .read database/create_todos_table.sql
+>  .exit
+```
+
+You are ready now, build and run it
 
 ```bash
 go build && ./todo
 ```
 
-now server runs on `http://localhost:8080`
+server runs on `http://localhost:8080`
 
 ## API Endpoint
 
