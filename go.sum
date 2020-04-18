@@ -1,0 +1,4 @@
+github.com/hariadivicky/nano v0.0.0-20200417035938-31c94f68215b h1:gg8dfTak0kdNvKi/3hKW6VYv3Zkd+UEQegRIShAaycM=
+github.com/hariadivicky/nano v0.0.0-20200417035938-31c94f68215b/go.mod h1:+Zv0JWnUp4eNsA/jBjbpmClB+seJ83xpgwt2JNsKXnQ=
+github.com/mattn/go-sqlite3 v2.0.3+incompatible h1:gXHsfypPkaMZrKbD5209QV9jbUTJKjyR5WD3HYQSd+U=
+github.com/mattn/go-sqlite3 v2.0.3+incompatible/go.mod h1:FPy6KqzDD04eiIsT53CuJW3U88zkxoIYsOqkbpncsNc=
